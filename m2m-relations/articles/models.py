@@ -1,4 +1,6 @@
+
 from django.db import models
+from django.core.exceptions import ValidationError
 
 
 class Article(models.Model):
@@ -12,16 +14,8 @@ class Article(models.Model):
         verbose_name = 'Статья'
         verbose_name_plural = 'Статьи'
 
-
-
-
     def __str__(self):
         return self.title
-
-
-
-from django.db import models
-from django.core.exceptions import ValidationError
 
 
 class Tag(models.Model):
